@@ -10,6 +10,7 @@ S = "${WORKDIR}/git"
 
 DEPENDS = " \
     basecamp-futech \
+    evcli-native \
 "
 
 EXTRA_OECMAKE += " \

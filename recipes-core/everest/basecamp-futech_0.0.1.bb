@@ -10,6 +10,7 @@ S = "${WORKDIR}/git"
 
 DEPENDS = " \
     everest-core \
+    evcli-native \
 "
 
 EXTRA_OECMAKE += " \
