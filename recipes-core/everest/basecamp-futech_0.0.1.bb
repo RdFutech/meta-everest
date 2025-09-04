@@ -8,6 +8,9 @@ SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "everest-core"
+DEPENDS = " \
+    everest-core \
+    evcli-native \
+"
 
 inherit cmake

@@ -8,6 +8,10 @@ SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "basecamp-futech"
+DEPENDS = " \
+    basecamp-futech \
+    everest-core \
+    evcli-native \
+"
 
 inherit cmake
