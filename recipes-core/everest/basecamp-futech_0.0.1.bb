@@ -10,7 +10,15 @@ S = "${WORKDIR}/git"
 
 DEPENDS = " \
     everest-core \
-    evcli-native \
+"
+
+EXTRA_OECMAKE += " \
+    -DDISABLE_EDM=ON \
+    -DNO_FETCH_CONTENT=ON \
+    -DEVEREST_ENABLE_RUN_SCRIPT_GENERATION=OFF \
+    -Deverest-core_INSTALL_EV_CLI_IN_PYTHON_VENV=OFF \
+    -Deverest-core_USE_PYTHON_VENV=OFF \
+    -DEV_SETUP_PYTHON_EXECUTABLE_USE_PYTHON_VENV=OFF \
 "
 
 inherit cmake
