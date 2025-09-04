@@ -9,6 +9,8 @@ S = "${WORKDIR}/git"
 
 SRCREV = "dac30cc72253f08e374996963c9ee56e079b5a9c"
 
+do_compile[network] = "1"
+
 inherit cmake pkgconfig systemd python3native
 
 DEPENDS = " \
