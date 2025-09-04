@@ -8,6 +8,8 @@ SRCREV = "b2cb634457ab4ff279728809ae9b2835a403bb4b"
 
 S = "${WORKDIR}/git"
 
+do_configure[network] = "1"
+
 DEPENDS = "basecamp-futech"
 
 inherit cmake
