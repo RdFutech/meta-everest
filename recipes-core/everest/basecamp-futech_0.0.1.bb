@@ -21,3 +21,7 @@ EXTRA_OECMAKE += " \
 "
 
 inherit cmake
+
+do_install:append() {
+    rm -f ${D}${datadir}/everest/version_information.txt
+}
