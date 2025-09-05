@@ -9,10 +9,8 @@ SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git"
 
 DEPENDS = " \
-    evcli-native \
+    basecamp-futech \
 "
-
-RDEPENDS:${PN} += "basecamp-futech"
 
 EXTRA_OECMAKE += " \
     -DDISABLE_EDM=ON \
