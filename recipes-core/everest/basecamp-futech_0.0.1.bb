@@ -13,7 +13,7 @@ DEPENDS = " \
     evcli-native \
 "
 
-FILES:${PN} += "${datadir}/everest/*"
+FILES:${PN} += "${datadir}/everest/* /usr/firmware /usr/firmware/* "
 
 EXTRA_OECMAKE += " \
     -DDISABLE_EDM=ON \
