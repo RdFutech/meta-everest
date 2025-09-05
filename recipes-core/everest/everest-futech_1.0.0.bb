@@ -17,6 +17,8 @@ DEPENDS = " \
 
 FILES:${PN} += "${datadir}/everest/*"
 
+CXXFLAGS:append = " -I${STAGING_INCDIR}/everest/gpio"
+
 EXTRA_OECMAKE += " \
     -DDISABLE_EDM=ON \
     -Deverest-core_INSTALL_EV_CLI_IN_PYTHON_VENV=OFF \
