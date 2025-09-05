@@ -15,6 +15,8 @@ DEPENDS = " \
     evcli-native \
 "
 
+FILES:${PN} += "${datadir}/everest/*"
+
 EXTRA_OECMAKE += " \
     -DDISABLE_EDM=ON \
     -Deverest-core_INSTALL_EV_CLI_IN_PYTHON_VENV=OFF \
