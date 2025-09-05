@@ -6,10 +6,13 @@ SRC_URI = "git://github.com/PionixInternal/everest-futech.git;protocol=ssh;user=
 # tag 1.0.0
 SRCREV = "${AUTOREV}"
 
+do_compile[network] = "1"
+
 S = "${WORKDIR}/git"
 
 DEPENDS = " \
     basecamp-futech \
+    evcli-native \
 "
 
 EXTRA_OECMAKE += " \
