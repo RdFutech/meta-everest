@@ -15,7 +15,7 @@ DEPENDS = " \
     evcli-native \
 "
 
-FILES:${PN} += "${datadir}/everest/*"
+FILES:${PN} += "${datadir}/everest/* ${datadir}/everest/firmware ${datadir}/everest/firmware/* "
 
 CXXFLAGS:append = " -I${STAGING_INCDIR}/everest/gpio"
 
