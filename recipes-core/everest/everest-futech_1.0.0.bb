@@ -17,7 +17,7 @@ DEPENDS = " \
 
 FILES:${PN} += "${datadir}/everest/* /usr/firmware /usr/firmware/* "
 
-CXXFLAGS:append = " -I${STAGING_INCDIR}/everest/gpio"
+#CXXFLAGS:append = " -I${STAGING_INCDIR}/everest/gpio"
 
 EXTRA_OECMAKE += " \
     -DDISABLE_EDM=ON \
