@@ -2,16 +2,21 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=86d3f3a95c324c9479bd8986968f4327"
 
 SRC_URI = "git://github.com/EVerest/everest-framework.git;branch=main;protocol=https \
-           file://0001-Set-PYTHON_MODULE_EXTENSION-to-.so-to-avoid-pollutin.patch \
            "
 
-inherit python3native
+# ensures the everestpy python bindings build properly
+inherit python3targetconfig
+
 inherit cmake
 inherit pkgconfig
 
 S = "${WORKDIR}/git"
 
+<<<<<<<< HEAD:recipes-core/everest/everest-framework_0.22.3.bb
 SRCREV = "8745e46ababf39f6e3a796e6edc735b8d39e0742"
+========
+SRCREV = "8fc13a05268d552c515e246ebbea1e6dee902404"
+>>>>>>>> scarthgap-futech:recipes-core/everest/everest-framework_0.23.0.bb
 
 # FIXME (aw): due to nodejs dependency
 do_configure[network] = "1"

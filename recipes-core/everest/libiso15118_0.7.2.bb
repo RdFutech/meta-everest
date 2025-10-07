@@ -8,7 +8,11 @@ inherit cmake
 
 S = "${WORKDIR}/git"
 
+<<<<<<<< HEAD:recipes-core/everest/libiso15118_0.7.1.bb
 SRCREV = "4d1a470aca9c626609f9c15c252ff89aa6906485"
+========
+SRCREV = "4490828128dc66f60f12c9210cbde99f177d5260"
+>>>>>>>> scarthgap-futech:recipes-core/everest/libiso15118_0.7.2.bb
 
 DEPENDS = "\
     everest-cmake \

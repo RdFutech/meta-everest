@@ -7,7 +7,11 @@ SRC_URI = "git://github.com/EVerest/everest-core.git;branch=release/2025.7.0;pro
 
 S = "${WORKDIR}/git"
 
+<<<<<<<< HEAD:recipes-core/everest/everest-core_2025.7.0.bb
 SRCREV = "10d2364e04c6aad054917f2bc9e87303c6ba6c2e"
+========
+SRCREV = "c16f187099c29b996eeecf44a2a05fa7db960bb2"
+>>>>>>>> scarthgap-futech:recipes-core/everest/everest-core_2025.8.0.bb
 
 do_compile[network] = "1"
 
