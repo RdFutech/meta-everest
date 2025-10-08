@@ -12,11 +12,7 @@ inherit pkgconfig
 
 S = "${WORKDIR}/git"
 
-<<<<<<<< HEAD:recipes-core/everest/everest-framework_0.22.3.bb
-SRCREV = "8745e46ababf39f6e3a796e6edc735b8d39e0742"
-========
 SRCREV = "8fc13a05268d552c515e246ebbea1e6dee902404"
->>>>>>>> scarthgap-futech:recipes-core/everest/everest-framework_0.23.0.bb
 
 # FIXME (aw): due to nodejs dependency
 do_configure[network] = "1"
