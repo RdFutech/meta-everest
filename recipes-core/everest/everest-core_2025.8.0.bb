@@ -3,6 +3,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=86d3f3a95c324c9479bd8986968f4327"
 
 SRC_URI = "git://github.com/EVerest/everest-core.git;branch=main;protocol=https \
            file://everest.service \
+           file://config-futech.yaml \ 
            "
 
 S = "${WORKDIR}/git"
@@ -60,4 +61,6 @@ do_install:append() {
         install -d ${D}${systemd_system_unitdir}
         install -m 0644 ${WORKDIR}/everest.service ${D}${systemd_system_unitdir}/
     fi
+    install -d ${D}${sysconfdir}/everest
+    install -m 0644 ${WORKDIR}/config-futech.yaml ${D}${sysconfdir}/everest/config-futech.yaml
 }

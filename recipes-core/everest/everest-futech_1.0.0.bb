@@ -14,16 +14,23 @@ DEPENDS = " \
     basecamp-futech \
     evcli-native \
 "
+inherit pkgconfig
+
+# oe-pkgdata-util find-path '*/gpio.hpp'
+CXXFLAGS:append = " -I${STAGING_INCDIR}/everest/gpio/include -Wno-psabi"
+CFLAGS:append   = " -Wno-psabi"
 
 FILES:${PN} += "${datadir}/everest/* /usr/firmware /usr/firmware/* "
-
-#CXXFLAGS:append = " -I${STAGING_INCDIR}/everest/gpio"
 
 EXTRA_OECMAKE += " \
     -DDISABLE_EDM=ON \
     -Deverest-core_INSTALL_EV_CLI_IN_PYTHON_VENV=OFF \
     -Deverest-core_USE_PYTHON_VENV=OFF \
     -DEV_SETUP_PYTHON_EXECUTABLE_USE_PYTHON_VENV=OFF \
+    -DCMAKE_SKIP_RPATH=ON \
+    -DCMAKE_BUILD_WITH_INSTALL_RPATH=OFF \
+    -DCMAKE_SKIP_INSTALL_RPATH=ON \
+    -DCMAKE_INSTALL_RPATH='' \
 "
 
 inherit cmake
