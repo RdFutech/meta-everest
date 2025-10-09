@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=86d3f3a95c324c9479bd8986968f4327"
 SRC_URI = "git://github.com/RdFutech/basecamp-futech.git;protocol=ssh;user=git;branch=bookworm_wip"
 
 # tag 0.0.1
-SRCREV = "${AUTOREV}"
+SRCREV = "3e9613028121ab5298819ba5033827730f86af57"
 
 S = "${WORKDIR}/git"
 
